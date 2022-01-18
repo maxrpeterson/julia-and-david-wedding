@@ -1,0 +1,31 @@
+html {
+  font-family: 'Lobster', cursive;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+  text-align: center;
+  display: grid;
+  grid-auto-rows: 20%;
+  align-items: center;
+  align-content: center;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+.j-and-d {
+  font-size: 1.5em;
+}
+
+@media (min-width: 900px) {
+  .j-and-d {
+    font-size: 4em;
+  }
+}
