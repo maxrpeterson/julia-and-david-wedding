@@ -12,7 +12,12 @@
     "url": "git+https://github.com/maxrpeterson/julia-and-david-wedding.git"
   },
   "keywords": [],
-  "contributors": ["Max Peterson <petersonmaxr@gmail.com> (https://maxpeterson.nyc)"],
+  "contributors": [
+    "Max Peterson <petersonmaxr@gmail.com> (https://maxpeterson.nyc)"
+  ],
   "license": "ISC",
-  "homepage": "https://juliaanddavid.wedding"
+  "homepage": "https://juliaanddavid.wedding",
+  "devDependencies": {
+    "browser-sync": "^2.27.7"
+  }
 }
