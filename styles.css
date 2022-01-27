@@ -10,9 +10,9 @@ main {
   height: 100vh;
   text-align: center;
   display: grid;
-  grid-auto-rows: 20%;
-  align-items: center;
+  grid-auto-rows: 20% auto 20% 20%;
   align-content: center;
+  align-items: center;
 }
 
 h1,
@@ -20,12 +20,56 @@ h2 {
   margin: 0;
 }
 
-.j-and-d {
-  font-size: 1.5em;
+.saengerbund-drawing-container {
+  height: 100%;
+}
+
+.saengerbund-drawing {
+  object-fit: contain;
+  max-height: 100%;
+}
+
+.names {
+  --name-horizontal-spacing: 2vw;
+
+  font-size: 3.75rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-items: baseline;
+}
+
+.julia {
+  justify-self: flex-end;
+  margin-inline-end: var(--name-horizontal-spacing);
+}
+
+.david {
+  justify-self: flex-start;
+  margin-inline-start: var(--name-horizontal-spacing);
+}
+
+.ampersand {
+  font-size: 0.75em;
 }
 
 @media (min-width: 900px) {
-  .j-and-d {
-    font-size: 4em;
+  .names {
+    --name-horizontal-spacing: 2rem;
+
+    font-size: 8rem;
+    grid-template-columns: 1fr min-content 1fr;
+  }
+
+  .julia {
+    justify-self: flex-end;
+  }
+
+  .david {
+    justify-self: flex-start;
+  }
+
+  .ampersand {
+    font-size: 0.6em;
   }
 }
