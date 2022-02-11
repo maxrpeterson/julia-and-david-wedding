@@ -12,25 +12,19 @@
   --lobster: 'Lobster', cursive;
 
   /* spacing */
-  --section-margin: 0.55em;
+  /* --section-margin: 0.55em; */
+  --page-width: 960px;
 }
 
 html {
   font-family: var(--im-fell-english);
   color: var(--almost-black);
+  text-align: center;
 }
 
 body {
   margin: 0;
   background-color: var(--background-tan);
-  text-align: center;
-}
-
-.header {
-  display: grid;
-  align-content: center;
-  align-items: center;
-  position: relative;
 }
 
 h1,
@@ -38,13 +32,20 @@ h2 {
   margin: 0;
 }
 
-h2 {
+.placeholder-screen {
   height: 200vh;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.header {
+  display: grid;
+  align-content: center;
+  align-items: center;
+
 }
 
 .names {
@@ -56,7 +57,7 @@ a {
   grid-template-rows: repeat(3, auto);
   justify-content: center;
   align-items: baseline;
-  margin: var(--section-margin) 0;
+  margin: 0.55em 0;
 }
 
 .name {
@@ -80,11 +81,14 @@ a {
 }
 
 .saengerbund-drawing-container {
-  aspect-ratio: 1345 / 625;
+  aspect-ratio: 1227 / 511;
   justify-self: center;
+  margin: 0 3rem;
 }
 
-.saengerbund-drawing {
+.saengerbund-drawing,
+.couple-photo {
+  display: block;
   object-fit: contain;
   height: 100%;
   width: 100%;
@@ -93,10 +97,8 @@ a {
 .nav-container {
   position: sticky;
   top: 0;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   background-color: var(--background-tan);
-  box-shadow: 0 10px 10px 0 var(--background-tan);
-  margin-bottom: var(--section-margin);
 }
 
 .nav-list {
@@ -115,8 +117,33 @@ a {
   color: var(--almost-black);
 }
 
-.nav-link:hover {
-  color: var(--dark-grey);
+.nav-link:active {
+  color: var(--light-grey);
+}
+
+.couple-photo-container {
+  display: grid;
+  place-items: center;
+}
+
+.couple-photo {
+  aspect-ratio: 3024 / 2316;
+}
+
+.date-container {
+  display: grid;
+  place-items: center;
+  padding: 3rem 1rem;
+}
+
+.date {
+  font-size: 2rem;
+}
+
+.more-details {
+  font-size: 2rem;
+  margin-top: 8rem;
+  margin-bottom: 12rem;
 }
 
 @media (min-width: 900px) {
@@ -142,11 +169,41 @@ a {
   }
 
   .saengerbund-drawing-container {
-    width: 40%;
+    height: 14rem;
+  }
+
+  .nav-container {
+    margin-bottom: 2rem;
   }
 
   .nav-list {
     grid-column-gap: 2rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .couple-photo {
+    max-width: var(--page-width);
+  }
+
+  .date-container {
+    padding: 8rem 0;
+  }
+
+  .date {
+    font-size: 3rem;
+  }
+
+  .more-details {
+    margin-bottom: 16rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-link:hover {
+    color: var(--dark-grey);
+  }
+
+  .nav-link:active {
+    color: var(--light-grey);
   }
 }
