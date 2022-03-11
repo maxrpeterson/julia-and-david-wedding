@@ -32,20 +32,27 @@ h2 {
   margin: 0;
 }
 
-.placeholder-screen {
-  height: 200vh;
-}
-
 a {
   text-decoration: none;
   color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+address {
+  font-style: inherit;
+}
+
+.placeholder-screen {
+  height: 200vh;
 }
 
 .header {
   display: grid;
   align-content: center;
   align-items: center;
-
 }
 
 .names {
@@ -130,14 +137,25 @@ a {
   aspect-ratio: 3024 / 2316;
 }
 
-.date-container {
+.date-location-container {
   display: grid;
-  place-items: center;
+  align-items: center;
+  grid-row-gap: 3rem;
   padding: 3rem 1rem;
 }
 
-.date {
-  font-size: 2rem;
+.date,
+.location {
+  font-size: 1.5rem;
+}
+
+.date,
+.location-name {
+  font-weight: 700;
+}
+
+.map {
+  width: 100%;
 }
 
 .more-details {
@@ -185,12 +203,17 @@ a {
     max-width: var(--page-width);
   }
 
-  .date-container {
+  .date-location-container {
     padding: 8rem 0;
   }
 
-  .date {
+  .date,
+  .location-name {
     font-size: 3rem;
+  }
+
+  .location-address {
+    font-size: 2rem;
   }
 
   .more-details {
