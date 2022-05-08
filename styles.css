@@ -32,6 +32,10 @@ h2 {
   margin: 0;
 }
 
+h2 {
+  font-size: 3rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -137,11 +141,14 @@ address {
   aspect-ratio: 3024 / 2316;
 }
 
+.content-section + .content-section {
+  margin-top: 3rem;
+}
+
 .date-location-container {
   display: grid;
   align-items: center;
   grid-row-gap: 3rem;
-  padding: 3rem 1rem;
 }
 
 .date,
@@ -165,6 +172,14 @@ address {
 }
 
 @media (min-width: 900px) {
+  body {
+    padding-bottom: 8rem;
+  }
+
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+
   .names {
     --name-horizontal-spacing: 2rem;
 
@@ -203,8 +218,8 @@ address {
     max-width: var(--page-width);
   }
 
-  .date-location-container {
-    padding: 8rem 0;
+  .content-section + .content-section {
+    margin-top: 8rem;
   }
 
   .date,
@@ -214,10 +229,6 @@ address {
 
   .location-address {
     font-size: 2rem;
-  }
-
-  .more-details {
-    margin-bottom: 16rem;
   }
 }
 
