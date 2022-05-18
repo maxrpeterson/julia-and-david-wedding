@@ -225,6 +225,19 @@ address {
   text-align: left;
 }
 
+.hotels-list {
+  max-width: calc(var(--content-width-desktop) * 1.5);
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) repeat(3, min-content);
+}
+
+.hotels-list thead,
+.hotels-list tbody,
+.hotels-list tr {
+  display: contents;
+}
+
 .more-details {
   font-size: 2rem;
   margin-top: 8rem;
