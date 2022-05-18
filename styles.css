@@ -7,6 +7,10 @@
   --almost-black: #20221e;
   --tan: #ded4c4;
 
+  /* opacities? */
+  --link-hover-opacity: 0.5;
+  --link-active-opacity: 0.3;
+
   /* fonts */
   --im-fell-english: 'IM Fell English', serif;
   --lobster: 'Lobster', cursive;
@@ -14,7 +18,8 @@
   /* spacing */
   --section-margin-mobile: 3rem;
   --section-margin-desktop: 8rem;
-  --page-width: 960px;
+  --content-width-desktop: 800px;
+  --content-width-desktop-breakout: 900px;
 }
 
 html {
@@ -29,6 +34,10 @@ body {
   display: grid;
 }
 
+figure {
+  margin: 0;
+}
+
 h1,
 h2 {
   line-height: 1;
@@ -40,15 +49,18 @@ h2 {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
 }
 
-p {
-  line-height: 1.5;
+p,
+ul {
+  line-height: 1.75;
   font-size: 1.3rem;
-  max-width: 800px;
   margin: 1.5rem auto;
+}
+
+p {
+  max-width: var(--content-width-desktop);
 }
 
 address {
@@ -135,10 +147,11 @@ address {
 
 .nav-link {
   color: var(--almost-black);
+  text-decoration: none;
 }
 
 .nav-link:active {
-  color: var(--light-grey);
+  opacity: var(--link-active-opacity);
 }
 
 .couple-photo-container {
@@ -187,8 +200,8 @@ address {
   flex-flow: row wrap;
   gap: 1.5rem;
   align-items: center;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: var(--content-width-desktop-breakout);
+  margin: 2rem auto;
 }
 
 .photo-collage-picture {
@@ -200,6 +213,16 @@ address {
   object-fit: contain;
   width: 100%;
   height: auto;
+}
+
+.goofy-pose-photo {
+  max-width: 25rem;
+  height: auto;
+}
+
+.attire-links {
+  max-width: var(--content-width-desktop);
+  text-align: left;
 }
 
 .more-details {
@@ -259,19 +282,12 @@ address {
     font-size: 1.3rem;
   }
 
-  .couple-photo {
-    max-width: var(--page-width);
-  }
-
   .content-section {
     padding: 0 2rem;
   }
 
   .content-section + .content-section {
     margin-top: var(--section-margin-desktop);
-  }
-
-  .content-section p {
   }
 
   .date,
@@ -282,14 +298,57 @@ address {
   .location-address {
     font-size: 2rem;
   }
+
+  .photo-collage {
+    margin: 4rem auto;
+  }
+
+  .goofy-photos {
+    max-width: var(--content-width-desktop-breakout);
+    margin: 0 auto 5rem auto;
+  }
+
+  .goofy-photo-figure {
+    display: flex;
+  }
+
+  .goofy-photo-caption {
+    flex: 0 2 16rem;
+  }
+
+  .goofy-photo-figure.julia {
+    justify-content: flex-end;
+  }
+
+  .goofy-photo-caption {
+    margin-top: 1.5rem;
+  }
+
+  .goofy-photo-figure.julia .goofy-photo-caption {
+    margin-right: 2rem;
+    text-align: right;
+  }
+
+  .goofy-photo-figure.david .goofy-photo-caption {
+    text-align: left;
+    order: 1;
+  }
+
+  .goofy-pose-photo {
+    flex-shrink: 0;
+  }
+
+  .attire-links {
+    max-width: calc(var(--content-width-desktop) * 0.6666667);
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .nav-link:hover {
-    color: var(--dark-grey);
+  a:hover {
+    opacity: var(--link-hover-opacity);
   }
 
-  .nav-link:active {
-    color: var(--light-grey);
+  a:active {
+    opacity: var(--link-active-opacity);
   }
 }
