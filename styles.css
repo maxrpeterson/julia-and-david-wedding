@@ -143,6 +143,7 @@ address {
   font-weight: bold;
   font-size: 1.75rem;
   background-color: var(--background-tan);
+  line-height: 1;
 }
 
 .nav-link {
@@ -226,16 +227,33 @@ address {
 }
 
 .hotels-list {
-  max-width: calc(var(--content-width-desktop) * 1.5);
-  margin: 2rem auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) repeat(3, min-content);
+  list-style: none;
+  padding: 0;
 }
 
-.hotels-list thead,
-.hotels-list tbody,
-.hotels-list tr {
-  display: contents;
+.hotel {
+  padding: 0;
+}
+
+.hotel:first-child {
+  margin-top: 3rem;
+}
+
+.hotel + .hotel {
+  margin-top: 5rem;
+}
+
+.hotel h3 {
+  margin: 0;
+  line-height: 1;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.hotel p {
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  line-height: 1.5;
 }
 
 .more-details {
