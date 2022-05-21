@@ -32,6 +32,7 @@ body {
   margin: 0;
   background-color: var(--background-tan);
   display: grid;
+  padding-bottom: 8rem;
 }
 
 figure {
@@ -276,17 +277,7 @@ address {
   margin: 1rem auto;
 }
 
-.more-details {
-  font-size: 2rem;
-  margin-top: 8rem;
-  margin-bottom: 12rem;
-}
-
 @media (min-width: 900px) {
-  body {
-    padding-bottom: 8rem;
-  }
-
   h2 {
     font-size: 3rem;
   }
