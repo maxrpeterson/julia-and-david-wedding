@@ -130,15 +130,15 @@ address {
   top: 0;
   padding: 1.5rem 0;
   background-color: var(--background-tan);
-  order: -1;
 }
 
 .nav-list {
   list-style: none;
-  padding-left: 0;
+  padding: 0 3rem;
   margin: 0;
   display: grid;
   justify-content: center;
+  align-items: center;
   grid-column-gap: 5vw;
   font-weight: bold;
   font-size: 1.75rem;
@@ -162,7 +162,7 @@ address {
 
 .couple-photo {
   aspect-ratio: 620 / 839;
-  height: 50rem;
+  max-height: 50rem;
 }
 
 .content-section {
@@ -221,12 +221,12 @@ address {
   flex-flow: row wrap;
   gap: 1.5rem;
   align-items: center;
-  max-width: var(--content-width-desktop-breakout);
+  max-width: calc(var(--content-width-desktop-breakout) * 0.75);
   margin: 2rem auto;
 }
 
 .photo-collage-picture {
-  flex: 1 1 25rem;
+  flex: 1 1 15rem;
 }
 
 .photo-collage-picture img {
@@ -237,7 +237,7 @@ address {
 }
 
 .goofy-pose-photo {
-  max-width: 25rem;
+  max-width: 100%;
   height: auto;
 }
 
@@ -246,34 +246,34 @@ address {
   text-align: left;
 }
 
-.hotels-list {
+.link-list {
   list-style: none;
+  padding: 2rem 0 0 0;
+}
+
+.link-list-item {
   padding: 0;
 }
 
-.hotel {
-  padding: 0;
+.link-list-item + .link-list-item {
+  margin-top: 4rem;
 }
 
-.hotel:first-child {
-  margin-top: 3rem;
-}
-
-.hotel + .hotel {
-  margin-top: 5rem;
-}
-
-.hotel h3 {
+.link-list-item h3 {
   margin: 0;
   line-height: 1;
   font-weight: 700;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
-.hotel p {
-  margin: 1rem auto;
-  font-size: 1.4rem;
+.link-list-item p {
+  margin: 0 auto;
+  font-size: 1.3rem;
   line-height: 1.5;
+}
+
+* + .link-list-item p {
+  margin: 1rem auto;
 }
 
 .more-details {
@@ -369,14 +369,11 @@ address {
 
   .goofy-photo-caption {
     flex: 0 2 16rem;
+    margin-top: 0.6rem;
   }
 
   .goofy-photo-figure.julia {
     justify-content: flex-end;
-  }
-
-  .goofy-photo-caption {
-    margin-top: 1.5rem;
   }
 
   .goofy-photo-figure.julia .goofy-photo-caption {
@@ -390,6 +387,7 @@ address {
   }
 
   .goofy-pose-photo {
+    max-width: 20rem;
     flex-shrink: 0;
   }
 
