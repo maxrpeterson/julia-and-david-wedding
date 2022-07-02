@@ -49,6 +49,11 @@ h2 {
   font-size: 2rem;
 }
 
+h3 {
+  margin: 1.2rem;
+  font-size: 1.3rem;
+}
+
 a {
   color: inherit;
 }
@@ -252,6 +257,10 @@ address {
   padding: 2rem 0 0 0;
 }
 
+.hotel-proximity-section-heading + .link-list {
+  padding: 0;
+}
+
 .link-list-item {
   padding: 0;
 }
@@ -260,7 +269,41 @@ address {
   margin-top: 4rem;
 }
 
-.link-list-item h3 {
+.special-rate-hotel-card {
+  background-color: var(--light-grey);
+  padding: 2rem;
+  max-width: max-content;
+  margin: 0 auto 5rem auto;
+}
+
+.special-rate-hotel-section-heading {
+  margin: 0 0 1.5rem 0;
+}
+
+.special-rate-click-here {
+  display: block;
+  margin: 1rem 0 0 0;
+  font-size: 1.1rem;
+}
+
+.other-hotels-heading {
+  margin: 2rem 0;
+}
+
+.hotel-proximity-section {
+  max-width: max-content;
+  margin: 4rem auto 0 auto;
+  padding: 2rem;
+  border: 4px dashed var(--light-grey);
+}
+
+.hotel-proximity-section-heading {
+  color: var(--dark-grey);
+  margin: 0 1.5rem 2rem 1.5rem;
+}
+
+.link-list-item h3,
+.hotel-name {
   margin: 0;
   line-height: 1;
   font-weight: 700;
@@ -273,8 +316,9 @@ address {
   line-height: 1.5;
 }
 
-* + .link-list-item p {
-  margin: 1rem auto;
+* + .link-list-item p,
+p.hotel-address-phone {
+  margin: 1rem auto 0 auto;
 }
 
 @media (min-width: 900px) {
