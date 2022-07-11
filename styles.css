@@ -209,6 +209,12 @@ address {
   margin: 0 auto;
 }
 
+.wedding-map {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 960 / 540;
+}
+
 .rsvp-form-container {
   margin: 0 auto;
   max-width: var(--content-width-desktop);
